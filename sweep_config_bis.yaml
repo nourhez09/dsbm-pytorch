@@ -1,0 +1,26 @@
+# program: wandb_sweep.py
+program: main_IKL.py
+method: grid    # or "grid" if you prefer exhaustive search
+name: dsbm_sweep_2
+
+parameters:
+  batch_size:
+    value: 128
+  lr:
+    value: 1e-4
+  num_steps:
+    value: 20
+  dataset_size:
+    values: [5000, 10000, 15000]
+  dimension:
+    values: [2, 5, 10]
+  seed:
+    value: 42
+  epsilon:
+    value: 0.05
+  sigma:
+    value: 1
+  outer_iters:
+    value: 1000
+  inner_iters:
+    value: 10000

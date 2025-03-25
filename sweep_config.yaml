@@ -1,0 +1,25 @@
+program: wandb_sweep.py
+method: grid    # or "grid" if you prefer exhaustive search
+name: dsbm_sweep
+
+parameters:
+  batch_size:
+    value: 128
+  lr:
+    value: 1e-4
+  num_steps:
+    values: [10, 20 , 30]
+  dataset_size:
+    values: [5000, 10000, 15000]
+  dimension:
+    values: [2, 5, 10, 15]
+  seed:
+    values: [42, 50,1]
+  epsilon:
+    values: [0.05, 0.1]
+  sigma:
+    values: [1, 0.5]
+  outer_iters:
+    value: 1000
+  inner_iters:
+    value: 10000
